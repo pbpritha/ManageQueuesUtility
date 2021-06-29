@@ -1,0 +1,59 @@
+<template>
+    <div style="margin:.1rem">
+        <template if:false={displayAll}>
+            <p class="slds-p-around_xx-small">Edit Queue:</p>
+            <lightning-card  variant="Narrow"  title={queueName} icon-name="standard:queue">
+                <div class="slds-grid slds-p-left_xx-small">
+                    <div class="slds-col slds-size_2-of-8">
+                        <b>Supported Objects :</b>
+                    </div>
+                    <div class="slds-col slds-size_6-of-8">
+                        <template for:each={objectsInQueue} for:item="object">
+                            <p key={object}>{object}</p>
+                        </template>
+                        </div>
+                    </div>
+                <lightning-button variant="base"  slot="actions" onclick={viewAll} label="View All"></lightning-button>
+                <lightning-combobox name="membertype"
+                                class="slds-p-around_xx-small"
+                                label="Type of Member"
+                                value={selectedMemberType}
+                                placeholder="Select type of member" 
+                                options={allTypesOfMember}
+                                onchange={selectMemberType} 
+                                disabled={allowEdit}></lightning-combobox>
+                <template if:false={queueNotUpdated}>
+                    <p class="slds-p-left_xx-small">*Please save your changes before changing type of member</p>
+                </template>
+                <lightning-dual-listbox name="queuemembers"
+                            label="Select Members"
+                            source-label="Available Members"
+                            selected-label="Selected Members"
+                            field-level-help="To add members to this queue, select a type of member, then choose the group, role, or user from the 'Available Members' and move them to the 'Selected Members'. "
+                            options={options}
+                            value={values}
+                            onchange={handleChange}
+                            disable-reordering
+                            class="slds-p-around_xx-small"
+                            ></lightning-dual-listbox>
+                <div slot="footer" >
+                    <lightning-button class="slds-var-p-around_medium" variant="brand" label="Back" onclick={moveBack}></lightning-button>
+                    <lightning-button class="slds-var-p-around_medium" variant="brand" label="Save" onclick={saveQueue} disabled={queueNotUpdated}></lightning-button>
+                </div>
+            </lightning-card>
+        </template>
+        <template if:true={displayspinner}>
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </template> 
+        <template if:true={displayAll}>
+            <p class="slds-p-around_xx-small">View All Queue Members:</p>
+            <lightning-card class="slds-var-p-*_small" variant="Narrow"  title={queueName} icon-name="standard:groups">
+                <lightning-button variant="brand"  slot="actions" onclick={editQueue} label="Edit Queue"></lightning-button>
+                <lightning-datatable key-field="id"
+                                data={memberdata}
+                                columns={membercolumns}
+                                hide-checkbox-column="true"></lightning-datatable>
+            </lightning-card>
+        </template>
+    </div>
+</template>

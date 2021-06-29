@@ -1,0 +1,17 @@
+<template>
+    <div style="margin: 1rem">
+        <lightning-input type="search" placeholder="Search for Queues" variant="label-hidden" class="slds-var-m-bottom_small" label="Search" value={searchQueue} onchange={filterRecords}>
+        </lightning-input>
+    </div>
+    <template if:true={displayspinner}>
+        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+    </template>
+    <lightning-datatable key-field="id"
+                        data={data}
+                        columns={columns}
+                        onrowaction={navigateToQueueDetailPage}
+                        sorted-by={sortBy}
+                        sorted-direction={sortDirection}
+                        onsort={doSorting}
+                        hide-checkbox-column="true"></lightning-datatable>
+</template>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>QueueManagementScreen</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Custom_Manage_Queues</name>
+    </customPermissions>
+    <description>Permission Set to give access to the Manage Queues Utility</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>ManageQueueMembers</label>
+</PermissionSet>

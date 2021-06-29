@@ -1,0 +1,25 @@
+<template>
+    <template if:false={hasManageQueuePermission}>
+        <div class="slds-notify_container slds-is-relative">
+            <div class="slds-notify slds-notify_toast slds-theme_info" role="status">
+                <span class="slds-assistive-text">info</span>
+                <lightning-icon  variant="inverse" icon-name="utility:info" alternative-text="No Access" title="No Access"></lightning-icon>
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small slds-m-left_x-small">
+                        You donot have permission to view this tab.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template if:true={hasManageQueuePermission}>
+        <div>
+            <template if:true={displayList}>
+                <c-queue-management-screen display-component={displayList} onqueuedetails={handleEvent}></c-queue-management-screen>
+            </template>
+            <template if:true={displayDetails}>
+                <c-queue-details-screen queue-id={queueDetailsId} queue-name={queueDetailsName} user-list={users} group-list={groups} role-list={roles} roles-int-sub-list={rolesIntSubs} roles-sub-list={rolesSubs} onmovetopreviousscreen={handleBackEvent}></c-queue-details-screen>
+            </template>
+        </div>
+    </template>
+</template>
