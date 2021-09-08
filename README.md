@@ -9,13 +9,14 @@ As Salesforce doesnt provide an out of the box feature to be able Manage Queues 
 
 2. Assign the Permission set ManageQueueMembers to the user who require the functionality.
 ![image](https://user-images.githubusercontent.com/54357119/132451258-8fa84a49-7bf0-44cb-a3ca-094df5de292d.png)
+
 For users without the permission set the utility displays the message 'You dont have permission to view this tab.
 
 ![image](https://user-images.githubusercontent.com/54357119/132451456-72a45d3b-6ef2-4ffa-a65b-fa2bacf326dc.png)
 
 Once the Permission set is assigned, users would get the following view.
 
-![image](https://user-images.githubusercontent.com/54357119/132451630-298c5be7-44aa-49cd-9f66-ed338113f04c.png)
+![image](https://user-images.githubusercontent.com/54357119/132451799-bb10f4ed-8f87-484d-91e3-2d2f4325f95c.png)
 
 
 
