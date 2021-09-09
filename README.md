@@ -2,7 +2,7 @@
 ## Problem Statement
 As Salesforce doesnt provide an out of the box feature to be able Manage Queues without the Customize Application permission. As a business users often the requirement is to modify the members in a queue. With the Customize Application permission, there are added permissions like modifying field-level security. This is a custom utlity to be able to manage queue members without the customize application permission.
 ## Setting up the component
-1. Use the following link to INSTALL(https://login.salesforce.com/packaging/installPackage.apexp?p0=04t6F000004DJjBQAW) unlocked package of the code base in your environment. You can also manually push the changes in your environment. 
+1. Use the following link to [INSTALL](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t6F000004DJjBQAW) unlocked package of the code base in your environment. You can also manually push the changes in your environment. 
 2. This component can be added to Home page, Record page, App Page or on Utility Bar. Here is an example showing how to include the LWC component in the Utility bar.
 ![image](https://user-images.githubusercontent.com/54357119/132451080-305ea2af-b785-44ff-b208-fcefe3a88a86.png)
 
