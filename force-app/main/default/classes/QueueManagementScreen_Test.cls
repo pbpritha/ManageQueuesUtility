@@ -1,7 +1,7 @@
 /*
 * File Name   : QueueManagementScreen_Test
 * Description  : Test class for QueueManagementScreen.cls
-* @author     : pritha.biswas@tollgroup.com
+* @author     : pbpritha@gmail.com
 *------------------------------------------------------------------------------------
 * Modification Log:
 * Name              Date            Description             

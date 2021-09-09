@@ -1,7 +1,7 @@
 /*
 * File Name   : QueueManagementScreen
 * Description  : Controller class for Manage Queue Utility
-* @author     : pritha.biswas@tollgroup.com
+* @author     : pbpritha@gmail.com
 *------------------------------------------------------------------------------------
 * Modification Log:
 * Name              Date            Description             
@@ -12,7 +12,7 @@ public without sharing class QueueManagementScreen {
     }
     /*
     Description : Wrapper class to contain all types of member in a single instance
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     */
     public class QueueDetails {
         @AuraEnabled
@@ -61,7 +61,7 @@ public without sharing class QueueManagementScreen {
     
     /*
     Description : Wired method to return sorted(asc,desc) list of all queues
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     Method Name : getQueues
     Input Params : Sort order for Queue listview
     Output : sorted List of queue
@@ -77,7 +77,7 @@ public without sharing class QueueManagementScreen {
     }
     /*
     Description : Wired method to return list of all active and non-system users
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     Method Name : getUsers
     Input Params : no params
     Output : All list of active, non-system users formatted as the wrapper class MemberOptions
@@ -92,7 +92,7 @@ public without sharing class QueueManagementScreen {
     }
     /*
     Description : Wired method to return list of all public groups
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     Method Name : getGroups
     Input Params : no params
     Output : All list of public groups formatted as the wrapper class MemberOptions
@@ -104,7 +104,7 @@ public without sharing class QueueManagementScreen {
 
     /*
     Description : Wired method to return list of all roles
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     Method Name : getRoles
     Input Params : no params
     Output : All list of roles formatted as the wrapper class MemberOptions
@@ -115,7 +115,7 @@ public without sharing class QueueManagementScreen {
     }
     /*
     Description : Wired method to return list of all roles and internal subordinated
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     Method Name : getRolesIntSub
     Input Params : no params
     Output : All list of roles and internal subordinated formatted as the wrapper class MemberOptions
@@ -126,7 +126,7 @@ public without sharing class QueueManagementScreen {
     }
     /*
     Description : Wired method to return list of all roles, internal and portal subordinated
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     Method Name : getRolesSub
     Input Params : no params
     Output : All list of roles, internal and portal subordinated formatted as the wrapper class MemberOptions
@@ -137,7 +137,7 @@ public without sharing class QueueManagementScreen {
     }
     /*
     Description : common code made into a medhod for modular code
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     Method Name : getMembers
     Input Params : Set of queue Group Member Ids, Type of Member
     Output : List of Wrapper class: UserGroupDetails
@@ -152,7 +152,7 @@ public without sharing class QueueManagementScreen {
     }
     /*
     Description : Wired method to return Objects supported by a queue
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     Method Name : getQueueObjects
     Input Params : Id of the queue
     Output : List of Object Labels supported by the Queue
@@ -175,7 +175,7 @@ public without sharing class QueueManagementScreen {
     }
     /*
     Description : Wired method to return different type of member list
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     Method Name : getQueueData
     Input Params : Id of the queue, tyme of member selected
     Output : All the members of the type already in the queue in the wrapper class format: QueueDetails
@@ -231,7 +231,7 @@ public without sharing class QueueManagementScreen {
     } 
     /*
     Description : common code made into a medhod for modular code
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     Method Name : getMembers
     Input Params : Set of queue Group Member Ids, Type of Member
     Output : List of Wrapper class: UserGroupDetails
@@ -248,7 +248,7 @@ public without sharing class QueueManagementScreen {
     }
     /*
     Description : common code made into a medhod for modular code
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     Method Name : createAddedAndDeletedMemberList
     Input Params : existing Queue Member details , all selected members, queue id, new members to be added, existing members to be deleted
     Output : void
@@ -278,7 +278,7 @@ public without sharing class QueueManagementScreen {
     }    
     /*
     Description : Imperetive method to save updated list of members
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     Method Name : saveQueueMembers
     Input Params : all selected members, existing Queue Member details , type of member being updated
     Output : Map of update status and message
@@ -334,7 +334,7 @@ public without sharing class QueueManagementScreen {
     }
     /*
     Description : wired method to fetch all types of members for a queue for View All screen
-    Author : pritha.biswas@tollgroup.com
+    Author : pbpritha@gmail.com
     Method Name : fetchAllQueueMembers
     Input Params : Queue Id
     Output : List of Map of member details
